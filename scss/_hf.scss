@@ -1,0 +1,144 @@
+$c1:#008056;
+$c3:#EAE8E1;
+$c4:#42413F;
+
+.container-hf{
+   margin: 0 auto;
+   padding: 0px 40px;
+   max-width: 1400px;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+}
+@media(max-width: 50rem){
+   .container-hf{
+      padding: 0px 30px;
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 1.4rem;
+   }
+}
+
+.header{
+   z-index: 100;
+   padding: 40px 0px;
+   position: absolute;
+   width: 100%;
+   &__logo{
+      position: relative;
+      height: 30px;
+      width: 134px;
+      img{
+         position: absolute;
+         top: 0;
+         left: 0;
+         height: 100%;
+         width: 100%;
+      }
+   }
+   &__menu{
+      grid-column-start: span 2;
+   }
+   &__list{
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      line-height: 30px;
+      letter-spacing: 3px;
+      a{
+         color: white;
+         &:hover{
+            border-bottom: 1px solid white;
+         }
+      }
+   }
+}
+@media(max-width: 65rem){
+   .header{
+      &__list{
+         font-size: 1rem;
+         letter-spacing: 2px;
+      }
+   }
+}
+@media(max-width: 50rem){
+   .header{
+      padding: 30px 0px;
+      &__logo{
+         margin: auto;
+         height: 20px;
+         width: 89.33px;
+      }
+      &__list{
+         font-size: 0.8rem;
+         line-height: 0.8rem;
+      }
+   }
+}
+ 
+.footer{
+   padding: 60px 0px;
+   background-color: $c3;
+   &__column{
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      text-align: left;
+      letter-spacing: 1px;
+   }
+   &__text{
+      padding-bottom: 1.2rem;
+      color: $c4;
+   }
+   &__link{
+      display: block;
+      padding-bottom: 1.2rem;
+      color: $c1;
+      &:hover{
+         color: $c4;
+      }
+   }
+   &__icon{
+      height: 1.2rem;
+      width: 1.2rem;
+      background-color: $c1;
+      &:hover{
+         background-color: $c4;
+      }
+   }
+}
+@media(max-width: 65rem){
+   .footer{
+      &__column{
+         font-size: 1rem;
+      }
+      &__text{
+         padding-bottom: 1rem;
+      }
+      &__link{
+         padding-bottom: 1rem;
+      }
+      &__icon{
+         height: 1rem;
+         width: 1rem;
+      }
+   }
+}
+@media(max-width: 50rem){
+   .footer{
+      padding: 40px 0px;
+      &__column{
+         margin: auto;
+         font-size: 0.8rem;
+         text-align: center;
+      }
+      &__text{
+         padding-bottom: 0.8rem;
+      }
+      &__link{
+         padding-bottom: 0.8rem;
+      }
+      &__icon{
+         height: 0.8rem;
+         width: 0.8rem;
+      }
+   }
+}
